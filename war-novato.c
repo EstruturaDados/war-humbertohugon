@@ -1,15 +1,15 @@
-// Inclusão das bibliotecas padrão necessárias para entrada/saída, alocação de memória, manipulação de strings e tempo.
+// Inclusao das bibliotecas padrao necessarias para entrada/saida, alocacao de memoria, manipulacao de strings e tempo.
 
 #include <stdio.h>
 #include <string.h>
 
 // --- Constantes Globais ---
-// Definem valores fixos para o número de territórios, missões e tamanho máximo de strings, facilitando a manutenção.
+// Definem valores fixos para o numero de territorios, missoes e tamanho maximo de strings, facilitando a manutencao.
 
 #define TERRITORIOS 5
 
 // --- Estrutura de Dados ---
-// Define a estrutura para um território, contendo seu nome, a cor do exército que o domina e o número de tropas.
+// Define a estrutura para um territorio, contendo seu nome, a cor do exercito que o domina e o numero de tropas.
 
 
 typedef struct {
@@ -21,35 +21,35 @@ typedef struct {
 int main() {
     Territorio mapa[TERRITORIOS];
 
-    printf("\nVamos cadastrar os 5 territórios iniciais do nosso mundo.\n");
+    printf("\nVamos cadastrar os 5 territorios iniciais do nosso mundo.\n");
 
     for (int i = 0; i < TERRITORIOS; i++) {
-        printf("\n--- Cadastrando Território %d ---\n", i + 1);
+        printf("\n--- Cadastrando Territorio %d ---\n", i + 1);
 
-        printf("Nome do Território: ");
+        printf("Nome do Territorio: ");
         scanf("%29[^\n]", mapa[i].nome);
         getchar();
 
-        printf("Cor do Exército (ex: Azul, Verde): ");
+        printf("Cor do Exercito (ex: Azul, Verde): ");
         scanf("%9s", mapa[i].cor);
         getchar();
 
-        printf("Número de Tropas: ");
+        printf("Numero de Tropas: ");
         scanf("%d", &mapa[i].tropas);
         getchar();
     }
 
-    printf("\nCadastro Inicial concluído com sucesso!\n");
+    printf("\nCadastro Inicial concluido com sucesso!\n");
 
-    // Exebir os territórios cadastrados
+    // Exebir os territorios cadastrados
     printf("\n======================================\n");
     printf("     MAPA DO MUNDO - ESTADO ATUAL\n");
     printf("======================================\n");
 
     for (int i = 0; i < TERRITORIOS; i++) {
-        printf("\nTERRITÓRIO %d:\n", i + 1);
+        printf("\nTERRITORIO %d:\n", i + 1);
         printf("- Nome: %s\n", mapa[i].nome);
-        printf("- Dominado por: Exército %s\n", mapa[i].cor);
+        printf("- Dominado por: Exercito %s\n", mapa[i].cor);
         printf("- Tropas: %d\n", mapa[i].tropas);
     }
 
